@@ -1,0 +1,7 @@
+{
+  "name": "SmartConvert_AngularIonicMobileApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
