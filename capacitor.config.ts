@@ -3,7 +3,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
   appName: 'SmartConvert_AngularIonicMobileApp',
-  webDir: 'www'
+  webDir: 'www/browser'
 };
 
 export default config;

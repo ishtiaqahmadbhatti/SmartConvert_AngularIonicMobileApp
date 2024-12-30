@@ -1,0 +1,82 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7"> <!-- Increased width -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-danger text-white text-center">
+                    <h3>Sign In</h3>
+                </div>
+                <div class="card-body">
+                    <form #formData="ngForm" (ngSubmit)="Signin(formData)" novalidate
+                        (keydown.enter)="$event.preventDefault()">
+                        <div class="form-group mb-3">
+                            <label for="email"><b>Email:<span
+                                        *ngIf="userModel.Email=='' ||userModel.Email==null || userModel.Email==undefined"
+                                        class="text-danger">*</span></b></label>
+                            <input type="text" required pattern="^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"
+                                #email="ngModel" [class.is-valid]="email.touched && email.valid"
+                                [class.is-invalid]="email.touched && email.invalid" name="email" class="form-control"
+                                [(ngModel)]="userModel.Email" style="width: 100%;"> <!-- Increased width -->
+                            <!-- Email Related Validations -->
+                            <div *ngIf="email.touched && email.invalid">
+                                <div class="text-danger" *ngIf="email.errors && email.errors['required']">
+                                    <b>Email Is Required!</b>
+                                </div>
+                                <div class="text-danger" *ngIf="email.errors && email.errors['pattern']">
+                                    <b>Invalid Email!</b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label for="password"><b>Password:<span
+                                        *ngIf="userModel.Password=='' ||userModel.Password==null || userModel.Password==undefined"
+                                        class="text-danger">*</span></b></label>
+                            <input type="password" required
+                                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                [class.is-valid]="password.touched && password.valid"
+                                [class.is-invalid]="password.touched && password.invalid" #password="ngModel"
+                                name="password" class="form-control" [(ngModel)]="userModel.Password"
+                                style="width: 100%;"> <!-- Increased width -->
+                            <!-- Password Related Validations -->
+                            <div *ngIf="password.touched && password.invalid">
+                                <div class="text-danger" *ngIf="password.errors && password.errors['required']">
+                                    <b>Password Is Required!</b>
+                                </div>
+                                <div *ngIf="password.errors && password.errors['pattern']">
+                                    <b class="text-danger">Password Must Contain:</b>
+                                    <b>
+                                        <ol class="text-success">
+                                            <li>Max 8 Characters</li>
+                                            <li>Upper & Lower Letters</li>
+                                            <li>Numbers</li>
+                                            <li>Special Characters</li>
+                                        </ol>
+                                    </b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-end mb-3">
+                            <a routerLink="/authentication/forgotpassword" class="text-danger"
+                                style="text-decoration: none; font-weight: bolder;">
+                                Forgot Password?
+                            </a>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" [class.disabled]="formData.form.invalid" class="btn btn-danger">
+                                Sign in
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                Don't have an account?
+                <a routerLink="/authentication/signup" class="text-danger"
+                    style="text-decoration: none; font-weight: bolder;">
+                    Create account
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
