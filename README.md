@@ -1,1 +1,1 @@
-"# SmartConvert_AngularIonicMobileApp" 
+# SmartConvert_AngularIonicMobileApp
