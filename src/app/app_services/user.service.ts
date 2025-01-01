@@ -12,7 +12,7 @@ export class UserService {
 
   SaveUserRecord(userModel: UserModel) {
     const headers = new HttpHeaders().set('content-type', 'application/json');
-    return this.http.post(this._url + "/SaveUser", userModel, {
+    return this.http.post(this._url + "/InsertRecord", userModel, {
       headers
     })
   }

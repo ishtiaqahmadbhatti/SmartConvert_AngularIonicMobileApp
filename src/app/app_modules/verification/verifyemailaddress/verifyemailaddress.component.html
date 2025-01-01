@@ -1,1 +1,28 @@
-<p>verifyemailaddress works!</p>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7">
+        <div class="card shadow-sm">
+          <div class="card-header bg-danger text-white text-center">
+            <h3>Verify Email Address</h3>
+          </div>
+          <div class="card-body">
+            <p class="text-center text-muted">A 6-digit OTP code has been sent to your provided email address. Please check your email and enter the code below to verify your email address.</p>
+            <div class="otp-container">
+              <div class="otp-inputs">
+                <input type="text" maxlength="1" (keyup)="moveToNext($event, 0)" [ngClass]="{'border-red': !inputValues[0], 'border-green': inputValues[0]}" autofocus />
+                <input type="text" maxlength="1" (keyup)="moveToNext($event, 1)" [ngClass]="{'border-red': !inputValues[1], 'border-green': inputValues[1]}" />
+                <input type="text" maxlength="1" (keyup)="moveToNext($event, 2)" [ngClass]="{'border-red': !inputValues[2], 'border-green': inputValues[2]}" />
+                <input type="text" maxlength="1" (keyup)="moveToNext($event, 3)" [ngClass]="{'border-red': !inputValues[3], 'border-green': inputValues[3]}" />
+                <input type="text" maxlength="1" (keyup)="moveToNext($event, 4)" [ngClass]="{'border-red': !inputValues[4], 'border-green': inputValues[4]}" />
+                <input type="text" maxlength="1" (keyup)="moveToNext($event, 5)" [ngClass]="{'border-red': !inputValues[5], 'border-green': inputValues[5]}" />
+              </div>
+              <div class="d-grid">
+                <button class="btn btn-danger verify-button">Verify</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

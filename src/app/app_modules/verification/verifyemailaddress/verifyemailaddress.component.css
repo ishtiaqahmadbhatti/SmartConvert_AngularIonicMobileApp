@@ -1,0 +1,60 @@
+.container {
+    max-width: 800px;
+  }
+  
+  .card {
+    border-radius: 10px;
+  }
+  
+  .card-header {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .otp-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .otp-inputs input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid red; /* Default border color */
+  }
+  
+  .border-red {
+    border-color: red;
+  }
+  
+  .border-green {
+    border-color: green;
+  }
+  
+  .verify-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 50%; /* Ensure the width is set to 50% */
+    max-width: 150px; /* Add a max-width to limit the button size */
+    margin: 0 auto; /* Center the button */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+  }
+  
