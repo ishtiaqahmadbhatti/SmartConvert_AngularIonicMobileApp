@@ -1,5 +1,4 @@
 <ion-content>
-<app-header></app-header>
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 text-center">
@@ -36,7 +35,7 @@
     </div>
     <div class="row mt-4">
         <div class="col-md-4">
-            <div class="card shadow-sm clickable-card">
+            <div class="card shadow-sm clickable-card" (click)="convertPDFToWord()">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert PDF to Word</h5>
                     <p class="card-text">Easily convert your PDF files to editable Word documents.</p>
@@ -44,7 +43,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card shadow-sm clickable-card">
+            <div class="card shadow-sm clickable-card" (click)="convertWordToPDF()">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert Word to PDF</h5>
                     <p class="card-text">Convert your Word documents to PDF format quickly and easily.</p>

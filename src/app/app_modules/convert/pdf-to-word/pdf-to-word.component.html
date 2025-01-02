@@ -1,0 +1,15 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7">
+      <div class="card shadow-sm">
+        <div class="card-header bg-danger text-white text-center">
+          <h3>Convert PDF to Word</h3>
+        </div>
+        <div class="card-body text-center">
+          <input type="file" (change)="onFileSelected($event)" accept="application/pdf" class="form-control mb-3" />
+          <button class="btn btn-danger" (click)="convertToWord()" [disabled]="!selectedFile">Convert and Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

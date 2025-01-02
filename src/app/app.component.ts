@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './app_layouts/header/header.component';
 import { IonApp, IonSplitPane, IonRouterOutlet } from "@ionic/angular/standalone";
 
 @Component({
@@ -7,7 +8,7 @@ import { IonApp, IonSplitPane, IonRouterOutlet } from "@ionic/angular/standalone
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [HeaderComponent, RouterOutlet],
 })
 export class AppComponent {
   title = 'SmartConvert_AngularMobileApp';

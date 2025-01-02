@@ -21,5 +21,9 @@ export const AppRoutes: Routes = [
   {
     path: 'verification',
     loadChildren: () => import('./app_modules/verification/verification.routes').then(r => r.VerificationRoutes),
+  },
+  {
+    path: 'convert',
+    loadChildren: () => import('./app_modules/convert/convert.routes').then(r => r.ConvertRoutes),
   }
 ];
