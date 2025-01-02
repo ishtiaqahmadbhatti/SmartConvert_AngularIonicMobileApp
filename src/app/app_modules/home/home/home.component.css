@@ -1,0 +1,44 @@
+.container {
+  max-width: 1200px;
+}
+
+.card {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.clickable-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.clickable-card:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #004085;
+}
+
+/* New Section Background Color */
+.new-section {
+  background-color: #e6eef7; /* Light gray background */
+  padding: 30px;
+  border-radius: 10px;
+}

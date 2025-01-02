@@ -3,8 +3,12 @@ import { Routes } from '@angular/router';
 export const AppRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'authentication/signin',
+    redirectTo: '',
     pathMatch: 'full',
+  },
+  {
+    path: '',
+    loadComponent: () => import('./app_modules/home/home/home.component').then(c => c.HomeComponent)
   },
   {
     path: 'authentication',
