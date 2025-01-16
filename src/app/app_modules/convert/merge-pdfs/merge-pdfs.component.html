@@ -3,11 +3,11 @@
     <div class="col-12 col-sm-10 col-md-8 col-lg-8 col-xl-7">
       <div class="card shadow-sm">
         <div class="card-header bg-danger text-white text-center">
-          <h3>Convert PDF to Word</h3>
+          <h3>Merge PDFs</h3>
         </div>
         <div class="card-body text-center">
-          <input type="file" (change)="onFileSelected($event)" accept="application/pdf" class="form-control mb-3" />
-          <button class="btn btn-danger" (click)="convertPdfToWord()" [disabled]="!selectedFile">Convert and Download</button>
+          <input type="file" (change)="onFilesSelected($event)" accept="application/pdf" class="form-control mb-3" multiple />
+          <button class="btn btn-danger" (click)="mergePdfs()" [disabled]="!selectedFiles.length">Merge and Download</button>
         </div>
       </div>
     </div>

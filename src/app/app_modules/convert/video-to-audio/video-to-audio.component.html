@@ -1,0 +1,19 @@
+<div class="container">
+    <h2>Video to Audio Converter</h2>
+  
+    <div>
+      <input type="file" (change)="onFileSelected($event)" accept="video/*" />
+      <button (click)="convertFile()" [disabled]="isConverting || !selectedFile">
+        Convert to Audio
+      </button>
+    </div>
+  
+    <div *ngIf="isConverting" class="loading">
+      <p>Converting... Please wait.</p>
+    </div>
+  
+    <div *ngIf="downloadUrl" class="download">
+      <a [href]="downloadUrl" download="converted-audio.mp3">Download Audio File</a>
+    </div>
+  </div>
+  

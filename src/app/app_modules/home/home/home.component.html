@@ -8,7 +8,7 @@
     </div>
     <div class="row mt-4">
         <div class="col-md-4">
-            <div class="card shadow-sm clickable-card">
+            <div class="card shadow-sm clickable-card" (click)="mergePDFs()">
                 <div class="card-body text-center">
                     <h5 class="card-title">Merge PDF</h5>
                     <p class="card-text">Combine PDFs in the order you want with the easiest PDF merger available.</p>
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card shadow-sm clickable-card">
+            <div class="card shadow-sm clickable-card" (click)="convertPDFToImage()">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert PDF to Image</h5>
                     <p class="card-text">Convert your PDF files to high-quality images.</p>
@@ -61,7 +61,7 @@
     </div>
     <div class="row mt-4">
         <div class="col-md-4">
-            <div class="card shadow-sm clickable-card">
+            <div class="card shadow-sm clickable-card" (click)="convertImageToPDF()">
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert Image to PDF</h5>
                     <p class="card-text">Convert your images to PDF format quickly and easily.</p>
@@ -107,6 +107,17 @@
                 <div class="card-body text-center">
                     <h5 class="card-title">Convert HTML to PDF</h5>
                     <p class="card-text">Convert your HTML files to PDF format quickly and easily.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card shadow-sm clickable-card" (click)="convertVideoToAudio()">
+                    <img src="../../../../assets/videotoaudio.webp" class="card-img-top" alt="Convert Video to Audio">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Convert Video to Audio</h5>
+                        <p class="card-text">Extract audio from your video files quickly and easily.</p>
+                    </div>
                 </div>
             </div>
         </div>

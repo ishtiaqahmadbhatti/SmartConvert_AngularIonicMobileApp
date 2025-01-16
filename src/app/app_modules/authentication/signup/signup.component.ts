@@ -4,14 +4,14 @@ import { UserModel } from '../../../app_models/user.model';
 import { UserService } from '../../../app_controllers/services.controller';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { IonContent } from "@ionic/angular/standalone";
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
   standalone: true,
-  imports: [CommonModule, RouterModule, FormsModule, ReactiveFormsModule]
+  imports: [IonContent, CommonModule, RouterModule, FormsModule, ReactiveFormsModule]
 })
 export class SignupComponent implements OnInit {
   public userModel = new UserModel();

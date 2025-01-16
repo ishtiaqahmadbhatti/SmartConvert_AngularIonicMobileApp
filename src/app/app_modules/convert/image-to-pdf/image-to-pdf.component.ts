@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { ConvertService } from '../../../app_controllers/services.controller';
+
 @Component({
-  selector: 'app-pdf-to-word',
-  templateUrl: './pdf-to-word.component.html',
-  styleUrls: ['./pdf-to-word.component.css'],
-  standalone: true,
-  imports: []
+  selector: 'app-image-to-pdf',
+  templateUrl: './image-to-pdf.component.html',
+  styleUrls: ['./image-to-pdf.component.css']
 })
-export class PdfToWordComponent {
+export class ImageToPdfComponent {
   selectedFile: File | null = null;
   
   constructor(private convertService: ConvertService) { }
@@ -15,14 +14,12 @@ export class PdfToWordComponent {
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0];
   }
-  
-  convertPdfToWord(): void {
-    debugger;
+  convertImageToPdf(): void {
     if (this.selectedFile) {
-      this.convertService.convertPdfToWord(this.selectedFile).subscribe(response => {
-        this.downloadFile(response, 'converted.docx');
+      this.convertService.convertImageToPdf(this.selectedFile).subscribe(response => {
+        this.downloadFile(response, 'converted.pdf');
       }, error => {
-        console.error('Error converting PDF to Word:', error);
+        console.error('Error converting image to PDF:', error);
       });
     }
   }
@@ -37,5 +34,4 @@ export class PdfToWordComponent {
     window.URL.revokeObjectURL(url);
     document.body.removeChild(a);
   }
-
 }

@@ -8,5 +8,17 @@ export const ConvertRoutes: Routes = [
   {
     path: 'word-to-pdf',
     loadComponent: () => import('./word-to-pdf/word-to-pdf.component').then(c => c.WordToPdfComponent)
+  },
+  {
+    path: 'image-to-pdf',
+    loadComponent: () => import('./image-to-pdf/image-to-pdf.component').then(c => c.ImageToPdfComponent)
+  },
+  {
+    path: 'merge-pdfs',
+    loadComponent: () => import('./merge-pdfs/merge-pdfs.component').then(c => c.MergePdfsComponent)
+  },
+  {
+    path: 'video-to-audio',
+    loadComponent: () => import('./video-to-audio/video-to-audio.component').then(c => c.VideoToAudioComponent)
   }
 ];
